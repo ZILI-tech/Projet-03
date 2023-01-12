@@ -1,7 +1,8 @@
 body {
-  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
   font-family: "Montserrat";
+  margin: auto;
 }
 body header .first-header {
   display: flex;
@@ -34,6 +35,13 @@ body header .first-header .cart {
 body header .first-header .cart .price {
   margin-left: -30px;
   color: rgb(230, 65, 65);
+}
+body header .first-header .popup {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: rgb(245, 97, 97);
+  color: white;
 }
 body header .first-header .search {
   position: relative;
@@ -170,15 +178,32 @@ body .main .border-icons {
   height: 100px;
   background-color: #f1f1f1;
   margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 640px;
+  margin-top: -40px;
+  border: 0.1px solid #c5c3c3;
 }
 body .main .border-icons .icons {
-  display: inline;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+body .main .border-icons .icons-text {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  margin: 30px;
+  text-align: center;
+}
+body .main .border-icons img {
   width: 50px;
   height: 60px;
+}
+body .main .offer-1 {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+body .main .offer-2 {
+  width: 30%;
 }
 body .main .grid-images {
   display: flex;
@@ -280,16 +305,16 @@ body .main .parteners {
   background-color: #f2f2f2;
 }
 body .main .parteners .florists {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: flex;
   justify-content: center;
 }
 body .main .parteners .florist-logo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   margin: auto;
-  text-align: center;
   margin-top: 40px;
 }
 body .main *, body .main *::before, body .main *::after {
@@ -340,20 +365,20 @@ body .main .slideshow > ul > li.img3 {
 body .main .slideshow > ul > li.img4 {
   left: 300%;
 }
-body .main .slideshow > #slide_img1:checked ~ ul > li,
-body .main .slideshow > #pause_img1:checked ~ ul > li {
+body .main .slideshow > #slide_img1 ~ ul > li,
+body .main .slideshow > #pause_img1 ~ ul > li {
   transform: translatex(0%);
 }
-body .main .slideshow > #slide_img2:checked ~ ul > li,
-body .main .slideshow > #pause_img2:checked ~ ul > li {
+body .main .slideshow > #slide_img2 ~ ul > li,
+body .main .slideshow > #pause_img2 ~ ul > li {
   transform: translatex(-100%);
 }
-body .main .slideshow > #slide_img3:checked ~ ul > li,
-body .main .slideshow > #pause_img3:checked ~ ul > li {
+body .main .slideshow > #slide_img3 ~ ul > li,
+body .main .slideshow > #pause_img3 ~ ul > li {
   transform: translatex(-200%);
 }
-body .main .slideshow > #slide_img4:checked ~ ul > li,
-body .main .slideshow > #pause_img4:checked ~ ul > li {
+body .main .slideshow > #slide_img4 ~ ul > li,
+body .main .slideshow > #pause_img4 ~ ul > li {
   transform: translatex(-300%);
 }
 @keyframes slide {
@@ -414,50 +439,50 @@ body .main .slideshow > .suivant > label::after {
   border-style: solid;
   border-color: #f2f2f2;
 }
-body .main .slideshow > .slide:checked ~ .precedent > label,
-body .main .slideshow > .slide:checked ~ .suivant > label {
+body .main .slideshow > .slide ~ .precedent > label,
+body .main .slideshow > .slide ~ .suivant > label {
   opacity: 0;
   z-index: -1;
 }
-body .main .slideshow > #slide_img1:checked ~ .precedent > label.img4,
-body .main .slideshow > #pause_img1:checked ~ .precedent > label.img4,
-body .main .slideshow > #slide_img1:checked ~ .suivant > label.img2,
-body .main .slideshow > #pause_img1:checked ~ .suivant > label.img2,
-body .main .slideshow > #slide_img2:checked ~ .precedent > label.img1,
-body .main .slideshow > #pause_img2:checked ~ .precedent > label.img1,
-body .main .slideshow > #slide_img2:checked ~ .suivant > label.img3,
-body .main .slideshow > #pause_img2:checked ~ .suivant > label.img3,
-body .main .slideshow > #slide_img3:checked ~ .precedent > label.img2,
-body .main .slideshow > #pause_img3:checked ~ .precedent > label.img2,
-body .main .slideshow > #slide_img3:checked ~ .suivant > label.img4,
-body .main .slideshow > #pause_img3:checked ~ .suivant > label.img4,
-body .main .slideshow > #slide_img4:checked ~ .precedent > label.img3,
-body .main .slideshow > #pause_img4:checked ~ .precedent > label.img3,
-body .main .slideshow > #slide_img4:checked ~ .suivant > label.img1,
-body .main .slideshow > #pause_img4:checked ~ .suivant > label.img1 {
+body .main .slideshow > #slide_img1 ~ .precedent > label.img4,
+body .main .slideshow > #pause_img1 ~ .precedent > label.img4,
+body .main .slideshow > #slide_img1 ~ .suivant > label.img2,
+body .main .slideshow > #pause_img1 ~ .suivant > label.img2,
+body .main .slideshow > #slide_img2 ~ .precedent > label.img1,
+body .main .slideshow > #pause_img2 ~ .precedent > label.img1,
+body .main .slideshow > #slide_img2 ~ .suivant > label.img3,
+body .main .slideshow > #pause_img2 ~ .suivant > label.img3,
+body .main .slideshow > #slide_img3 ~ .precedent > label.img2,
+body .main .slideshow > #pause_img3 ~ .precedent > label.img2,
+body .main .slideshow > #slide_img3 ~ .suivant > label.img4,
+body .main .slideshow > #pause_img3 ~ .suivant > label.img4,
+body .main .slideshow > #slide_img4 ~ .precedent > label.img3,
+body .main .slideshow > #pause_img4 ~ .precedent > label.img3,
+body .main .slideshow > #slide_img4 ~ .suivant > label.img1,
+body .main .slideshow > #pause_img4 ~ .suivant > label.img1 {
   opacity: 1;
   z-index: 1;
 }
-body .main .slideshow > #play_img1:checked ~ .precedent > label.img4,
-body .main .slideshow > #play_img1:checked ~ .suivant > label.img2 {
+body .main .slideshow > #play_img1 ~ .precedent > label.img4,
+body .main .slideshow > #play_img1 ~ .suivant > label.img2 {
   animation: anim_fleches 17.2s infinite -2s;
 }
-body .main .slideshow > #play_img1:checked ~ .precedent > label.img1,
-body .main .slideshow > #play_img1:checked ~ .suivant > label.img3 {
+body .main .slideshow > #play_img1 ~ .precedent > label.img1,
+body .main .slideshow > #play_img1 ~ .suivant > label.img3 {
   animation: anim_fleches 17.2s infinite 2.3s;
 }
-body .main .slideshow > #play_img1:checked ~ .precedent > label.img2,
-body .main .slideshow > #play_img1:checked ~ .suivant > label.img4 {
+body .main .slideshow > #play_img1 ~ .precedent > label.img2,
+body .main .slideshow > #play_img1 ~ .suivant > label.img4 {
   animation: anim_fleches 17.2s infinite 6.6s;
 }
-body .main .slideshow > #play_img1:checked ~ .precedent > label.img3,
-body .main .slideshow > #play_img1:checked ~ .suivant > label.img1 {
+body .main .slideshow > #play_img1 ~ .precedent > label.img3,
+body .main .slideshow > #play_img1 ~ .suivant > label.img1 {
   animation: anim_fleches 17.2s infinite 10.9s;
 }
-body .main .slideshow > .slide:checked ~ .precedent > label,
-body .main .slideshow > .slide:checked ~ .suivant > label,
-body .main .slideshow > .pause:checked ~ .precedent > label,
-body .main .slideshow > .pause:checked ~ .suivant > label {
+body .main .slideshow > .slide ~ .precedent > label,
+body .main .slideshow > .slide ~ .suivant > label,
+body .main .slideshow > .pause ~ .precedent > label,
+body .main .slideshow > .pause ~ .suivant > label {
   animation-play-state: paused;
 }
 @keyframes anim_fleches {
@@ -482,46 +507,46 @@ body .main .slideshow > .play_pause {
   left: 50%;
   z-index: 1;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause,
-body .main .slideshow > .slide:checked ~ .play_pause > .play,
-body .main .slideshow > .pause:checked ~ .play_pause > .play {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause,
+body .main .slideshow > .slide ~ .play_pause > .play,
+body .main .slideshow > .pause ~ .play_pause > .play {
   display: block;
   z-index: 1;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .play,
-body .main .slideshow > .slide:checked ~ .play_pause > .pause,
-body .main .slideshow > .pause:checked ~ .play_pause > .pause {
+body .main .slideshow > #play_img1 ~ .play_pause > .play,
+body .main .slideshow > .slide ~ .play_pause > .pause,
+body .main .slideshow > .pause ~ .play_pause > .pause {
   display: none;
   z-index: -1;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img1,
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img2,
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img3,
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img4 {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img1,
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img2,
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img3,
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img4 {
   opacity: 0;
   z-index: -1;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img1 {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img1 {
   animation: anim_fleches 17.2s infinite -2s;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img2 {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img2 {
   animation: anim_fleches 17.2s infinite 2.3s;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img3 {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img3 {
   animation: anim_fleches 17.2s infinite 6.6s;
 }
-body .main .slideshow > #play_img1:checked ~ .play_pause > .pause.img4 {
+body .main .slideshow > #play_img1 ~ .play_pause > .pause.img4 {
   animation: anim_fleches 17.2s infinite 10.9s;
 }
-body .main .slideshow > .slide:checked ~ .play_pause > .pause,
-body .main .slideshow > .pause:checked ~ .play_pause > .pause {
+body .main .slideshow > .slide ~ .play_pause > .pause,
+body .main .slideshow > .pause ~ .play_pause > .pause {
   animation-play-state: paused;
 }
-body .main .slideshow > #play_img1:checked ~ ul > li {
+body .main .slideshow > #play_img1 ~ ul > li {
   animation: slide 17.2s infinite;
 }
-body .main .slideshow > #play_img1:checked ~ ul > li,
-body .main .slideshow > .pause:checked ~ ul > li {
+body .main .slideshow > #play_img1 ~ ul > li,
+body .main .slideshow > .pause ~ ul > li {
   transition: none;
 }
 body .main .slideshow > .play_pause {
@@ -586,26 +611,26 @@ body .main .slideshow > .puces > label > .actif_puces {
   transition: 0.3s ease;
   transform: scale(0);
 }
-body .main .slideshow > #slide_img1:checked ~ .puces > label.img1 > .actif_puces,
-body .main .slideshow > #pause_img1:checked ~ .puces > label.img1 > .actif_puces,
-body .main .slideshow > #slide_img2:checked ~ .puces > label.img2 > .actif_puces,
-body .main .slideshow > #pause_img2:checked ~ .puces > label.img2 > .actif_puces,
-body .main .slideshow > #slide_img3:checked ~ .puces > label.img3 > .actif_puces,
-body .main .slideshow > #pause_img3:checked ~ .puces > label.img3 > .actif_puces,
-body .main .slideshow > #slide_img4:checked ~ .puces > label.img4 > .actif_puces,
-body .main .slideshow > #pause_img4:checked ~ .puces > label.img4 > .actif_puces {
+body .main .slideshow > #slide_img1 ~ .puces > label.img1 > .actif_puces,
+body .main .slideshow > #pause_img1 ~ .puces > label.img1 > .actif_puces,
+body .main .slideshow > #slide_img2 ~ .puces > label.img2 > .actif_puces,
+body .main .slideshow > #pause_img2 ~ .puces > label.img2 > .actif_puces,
+body .main .slideshow > #slide_img3 ~ .puces > label.img3 > .actif_puces,
+body .main .slideshow > #pause_img3 ~ .puces > label.img3 > .actif_puces,
+body .main .slideshow > #slide_img4 ~ .puces > label.img4 > .actif_puces,
+body .main .slideshow > #pause_img4 ~ .puces > label.img4 > .actif_puces {
   transform: scale(1);
 }
-body .main .slideshow > #play_img1:checked ~ .puces > label.img1 > .actif_puces {
+body .main .slideshow > #play_img1 ~ .puces > label.img1 > .actif_puces {
   animation: anim_puces 17.2s infinite -2s;
 }
-body .main .slideshow > #play_img1:checked ~ .puces > label.img2 > .actif_puces {
+body .main .slideshow > #play_img1 ~ .puces > label.img2 > .actif_puces {
   animation: anim_puces 17.2s infinite 2.3s;
 }
-body .main .slideshow > #play_img1:checked ~ .puces > label.img3 > .actif_puces {
+body .main .slideshow > #play_img1 ~ .puces > label.img3 > .actif_puces {
   animation: anim_puces 17.2s infinite 6.6s;
 }
-body .main .slideshow > #play_img1:checked ~ .puces > label.img4 > .actif_puces {
+body .main .slideshow > #play_img1 ~ .puces > label.img4 > .actif_puces {
   animation: anim_puces 17.2s infinite 10.9s;
 }
 @keyframes anim_puces {
@@ -618,12 +643,12 @@ body .main .slideshow > #play_img1:checked ~ .puces > label.img4 > .actif_puces 
     background-color: unset;
   }
 }
-body .main .slideshow > #play_img1:checked ~ .puces > label > .actif_puces,
-body .main .slideshow > .pause:checked ~ .puces > label > .actif_puces {
+body .main .slideshow > #play_img1 ~ .puces > label > .actif_puces,
+body .main .slideshow > .pause ~ .puces > label > .actif_puces {
   transition: none;
 }
-body .main .slideshow > .slide:checked ~ .puces > label > .actif_puces,
-body .main .slideshow > .pause:checked ~ .puces > label > .actif_puces {
+body .main .slideshow > .slide ~ .puces > label > .actif_puces,
+body .main .slideshow > .pause ~ .puces > label > .actif_puces {
   animation-play-state: paused;
 }
 body footer {
@@ -642,22 +667,25 @@ body footer .large-screen-nav {
 }
 body footer .large-screen-nav ul {
   text-decoration: none;
-  font-weight: lighter;
-  margin: auto;
-}
-body footer .large-screen-nav a {
-  text-decoration: none;
-  color: rgb(168, 164, 164);
+  font-size: 13px;
 }
 body footer .large-screen-nav li {
   display: flex;
   align-items: flex-start;
   list-style-type: none;
+  text-align: left;
+}
+body footer .large-screen-nav li a {
+  text-decoration: none;
+  color: rgb(168, 164, 164);
+  margin-left: -40px;
+}
+body footer .large-screen-nav li a:hover {
+  color: red;
 }
 body footer .large-screen-nav .footer-contain {
   width: 100%;
   color: white;
-  text-align: center;
   display: flex;
   justify-content: space-evenly;
 }
@@ -670,6 +698,69 @@ body footer .large-screen-nav .footer-entete {
 body footer .footer-content {
   display: flex;
   flex-direction: column;
+  text-align: left;
+}
+body footer .ul-content {
+  display: flex;
+  align-items: flex-start;
+}
+body footer .fa::before {
+  margin-left: -40px;
+}
+body footer .fa {
+  width: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body {
+    width: 100%;
+  }
+  body .search, body .phone, body hr {
+    display: none;
+  }
+  body .first-header {
+    width: 100%;
+  }
+  body .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body .main .border-icons {
+    margin-top: 150px;
+    width: 70%;
+    height: 300px;
+  }
+  body .main .border-icons .icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .main .border-icons .icons-text {
+    width: 180px;
+    font-size: 10px;
+    flex-wrap: wrap;
+  }
+  body .main .grid-images {
+    width: 100%;
+  }
+  body .main .offer {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  body .main .our-offer {
+    width: 48%;
+  }
+  body .main .offer-1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .main .offer-2 {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
