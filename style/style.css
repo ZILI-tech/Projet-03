@@ -4,6 +4,9 @@ body {
   font-family: "Montserrat";
   margin: auto;
 }
+body .arrivage-small-screen, body .top-small-screen {
+  display: none;
+}
 body header .first-header {
   display: flex;
   justify-content: space-around;
@@ -198,12 +201,15 @@ body .main .border-icons img {
   height: 60px;
 }
 body .main .offer-1 {
-  width: 60%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 body .main .offer-2 {
-  width: 30%;
+  width: 50%;
+  margin-left: 30px;
+  object-fit: cover;
 }
 body .main .grid-images {
   display: flex;
@@ -216,8 +222,16 @@ body .main .offer {
   width: 100%;
   margin-top: 100px;
 }
-body .main .our-offer {
-  width: 30%;
+body .main .our-offer-1 {
+  width: 50%;
+}
+body .main .our-offer-2 {
+  width: 50%;
+  margin-left: 20px;
+}
+body .main .our-offer-3 {
+  width: 100%;
+  object-fit: cover;
 }
 body .main img {
   object-fit: cover;
@@ -245,9 +259,6 @@ body .main .arrivage .arrival .price-reduction {
   font-size: 10px;
   border-radius: 0 5px 5px 0;
 }
-body .main .arrivage .arrival .arrival {
-  text-align: center;
-}
 body .main .arrivage .arrival .form {
   position: absolute;
   top: 20px;
@@ -264,6 +275,51 @@ body .main .arrivage .items {
   justify-content: space-between;
 }
 body .main .new-arrival {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
+}
+body .main .top {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+body .main .top .arrival-top-products {
+  position: relative;
+  width: 22%;
+  height: 365px;
+  background-color: rgb(243, 241, 237);
+}
+body .main .top .arrival-top-products .price-reduction {
+  position: absolute;
+  top: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: rgb(86, 143, 86);
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  border-radius: 0 5px 5px 0;
+}
+body .main .top .arrival-top-products .form {
+  position: absolute;
+  top: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: rgb(211, 57, 57);
+  color: white;
+  font-weight: bold;
+  font-size: 10px;
+  border-radius: 0 5px 5px 0;
+}
+body .main .top .items-top-products {
+  display: flex;
+  justify-content: space-between;
+}
+body .main .top-products {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -294,10 +350,26 @@ body .main .day-deal {
 body .main .best-offer {
   width: 100%;
 }
+body .main .latest {
+  width: 80%;
+  margin: auto;
+}
+body .main .latest-offer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body .main .our-latest-offer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
 body .main .news {
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin: auto;
 }
 body .main .parteners {
   width: 100%;
@@ -718,6 +790,12 @@ body footer .fa {
   body .search, body .phone, body hr {
     display: none;
   }
+  body .top, body .top-products, body .items-top-products, body .items-top-products, body .arrival-top-products {
+    display: none;
+  }
+  body .top h1, body .top-products h1, body .items-top-products h1, body .items-top-products h1, body .arrival-top-products h1 {
+    display: none;
+  }
   body .first-header {
     width: 100%;
   }
@@ -749,17 +827,149 @@ body footer .fa {
     display: flex;
     flex-direction: column;
   }
-  body .main .our-offer {
-    width: 48%;
+  body .main .our-offer-1 {
+    width: 100%;
+  }
+  body .main .our-offer-2 {
+    width: 100%;
   }
   body .main .offer-1 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 60px;
   }
   body .main .offer-2 {
     display: flex;
     justify-content: center;
+    margin: auto;
+    margin-top: 40px;
+  }
+  body .main .arrivage-small-screen {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  }
+  body .main .arrivage-small-screen .arrivage-small-screen-contain {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  body .main .arrivage-small-screen .items-1 {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  body .main .arrivage-small-screen .items-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  body .main .arrivage-small-screen .items-3 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+  body .main .arrivage-small-screen .arrival {
+    width: 100%;
+    background-color: rgba(231, 231, 231, 0.8156862745);
+    margin: 10px;
+    object-fit: cover;
+  }
+  body .natural-flowers {
+    width: 60%;
+  }
+  body .beautifull-flowers {
+    width: 100%;
+  }
+  body .arrivage, body .new-arrival, body .items, body .arrival {
+    display: none;
+  }
+  body .top-small-screen {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  body .top-small-screen .arrival-small-screen {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+    height: 250px;
+    background-color: rgb(243, 241, 237);
+  }
+  body .top-small-screen .arrival-small-screen .price-reduction {
+    position: absolute;
+    top: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(86, 143, 86);
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  body .top-small-screen .arrival-small-screen .form {
+    position: absolute;
+    top: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: rgb(211, 57, 57);
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  body .top-small-screen .items-small-screen {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .top-products-small-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 100px;
+  }
+  body .day-deal {
+    width: 70%;
+    margin: auto;
+  }
+  body .latest {
+    width: 70%;
+    margin: auto;
+  }
+  body .latest-offer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  body .our-latest-offer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+  }
+  body .news {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  }
+  body footer {
+    width: 100%;
+  }
+  body footer .large-screen-nav {
+    width: 70%;
+  }
+  body footer .footer-contain {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
   }
 }
 
