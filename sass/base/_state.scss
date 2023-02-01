@@ -1,0 +1,558 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    // max-width: 1440px;
+    // height: 100%;
+    font-family: 'Montserrat';
+    // font-weight: lighter;
+    margin: auto;
+    
+    .menu, #chk1, .small_screen, .arrivage-small-screen, .top-small-screen {
+        display: none;
+    }
+    
+    header {
+
+        .first-header {
+
+            display: flex;
+            justify-content: space-around;
+            // align-items: center;
+            text-align: center;
+            margin-top: 50px;
+    
+            .tel {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            .phone {
+                display: inline-block;
+                font-size: 14px;
+                
+                a {
+                    text-decoration: none;
+                    color: black;
+                    margin-left: 40px;
+                }
+
+                a:hover {
+                    color: rgb(241, 108, 108);
+                }
+
+            }
+    
+            .shop {
+                display: flex;
+                justify-content: space-around;
+            }
+    
+            .cart {
+                display: inline-block;
+                font-size: 14px;
+                margin-left: 20px;
+    
+                .price {
+                    // color: black;
+                    margin-left: -30px;
+                    color: rgb(230, 65, 65);
+                }
+            }
+
+            .popup {
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                background-color:rgb(245, 97, 97);
+                color: white;
+            }
+    
+    
+            .search {
+                position: relative;
+    
+                .search-bar {
+                    border-radius: 20px;
+                    border-color: rgb(211, 207, 211);
+                    width: 500px;
+                    height: 40px;
+                }
+        
+                
+                .fa-magnifying-glass::before {
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                }
+            }
+    
+    
+            
+            .fa-bag-shopping::before {
+                font-size: 20px;
+            }
+
+        }
+
+        hr {
+            width: 100%;
+            opacity: 0.33;
+        }
+
+        .large-screen-nav {
+            // position: fixed;
+            // top: 5px;
+            // left: 5px;
+            // text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+
+            nav {
+                position: sticky;
+
+                // .deroulant {
+                //     text-align: center;
+                // }
+
+                a
+               {
+                text-align: center;   
+                display: block;
+                text-decoration: none;
+                color: #1b1d1d;
+                border-bottom: 2px solid transparent;
+                // margin-right: 15px;
+               }
+               
+               a:hover {
+                color: orange;
+                border-bottom: 2px solid gold;
+               }
+
+            }
+                
+
+            // nav a:hover
+
+            // {
+            //     color: red;
+            // }
+
+            ul {
+                text-decoration: none;
+                color:white;
+                margin:auto;
+                text-align: center;
+                display: flex;
+                justify-content: space-evenly;
+
+                .sous {
+                    display: none;
+                    box-shadow: 0px 1px 2px #CCC;
+                    background-color: white;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1000;
+
+                    li{
+                        float: none;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    a{
+                        text-align: center;
+                        padding: 10px;
+                        border-bottom: none;
+                    }
+
+                    a:hover {
+                        border-bottom: none;
+                        background-color: RGBa(200,200,200,0.1);
+                    }
+
+                }
+        
+                li:hover .sous {
+                    display: block;
+                }               
+
+                ul::after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                }
+    
+                li{
+                    content:" ▼";
+                    font-size: 12px;
+                    text-decoration: none;
+                    display:inline;
+                    color:white;
+                    position: relative;
+                    text-align: center;
+    
+                    a {
+                        text-decoration: none;
+                        color: black;
+                        margin: 30px;
+                    }
+    
+                    a:hover {
+                        color: rgb(233, 102, 102);
+                    }
+                }
+            }
+
+
+                
+        }
+
+
+    }
+
+    .main {
+        width: 100%;
+        margin: auto;
+        position: relative;
+
+        .barre {
+            text-decoration: line-through;
+        }
+
+        .contain {
+            width: 100%;
+            background-color: rgb(252, 227, 231);
+            height: 700px;
+            display: flex;
+            justify-content: center;
+
+            .our-offers {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                justify-content: space-between;
+                
+                .first-offer, .second-offer, .third-offer {
+                    width: 20%;
+                    height: 50px;
+                    text-align: center;
+
+                    img {
+                        text-align: center;
+                        margin: 30px;
+                        object-fit: cover;
+                    }
+                }
+
+            }           
+            
+        }
+
+        .border-icons {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            width: 80%;
+           // height: 150px;
+            background-color: #f1f1f1;
+            margin: auto;
+            margin-top: -100px;
+            /*position: absolute;
+            left: 0;
+            right: 0;
+            top: 600px;*/
+            border: 0.1px solid #c5c3c3;
+            z-index: 1;
+
+            .icons {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                // width: 50px; height: 60px;
+            }
+
+            .icons-text {
+                display: flex;
+                justify-content: space-between;
+                justify-content: center;
+                margin: 30px;
+                text-align: center;
+                font-size: 12px;
+            } 
+
+            img {
+                width: 50px;
+                height: 60px;
+            }
+
+        }
+
+        .grid-images {
+        display: flex;
+        width: 80%;
+        margin: auto;
+    }
+
+    .natural-flowers {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        .flower_1 {
+            width: 48%;
+            overflow: hidden;
+
+            img {
+                width:100%;height:auto;
+            }
+    
+            img:hover {
+                width:100%;
+                -webkit-transform:scale(1.3);
+                transform:scale(1.3);
+                -webkit-transition:1s ease-in-out;
+                transition:1s ease-in-out;
+            }
+
+        }
+
+        .flower_2 {
+            width: 48%;
+            overflow: hidden;
+
+            img {
+                width:100%;height:auto;
+            }
+    
+            img:hover {
+                width:100%;
+                -webkit-transform:scale(1.3);
+                transform:scale(1.3);
+                -webkit-transition:1s ease-in-out;
+                transition:1s ease-in-out;
+            }
+
+        }
+
+    }
+
+    .beautifull-flowers {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .day-deal {
+        width: 80%;
+        margin: auto;
+    }
+
+    .best-offer {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            width:100%;height:auto;
+        }
+
+        img:hover {
+            width:100%;
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+            -webkit-transition:1s ease-in-out;
+            transition:1s ease-in-out;
+        }
+
+    }
+
+    .latest {
+        width: 80%;
+        margin: auto;
+
+    }
+
+    .latest-offer {
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        // margin: ;
+    }
+
+    .our-latest-offer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+    }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+    }
+
+    .parteners {
+        width: 100%;
+        height: 200px;
+        background-color: #f2f2f2;
+
+        .florists {
+           width: 90%;
+           margin: auto;
+           display: flex;
+           justify-content: center;
+        }
+
+        .florist-logo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            // text-align: center;
+            margin-top: 40px;
+            overflow: hidden;
+        
+            img {
+                width:100%;height:auto;
+            }
+        
+            img:hover {
+                width:100%;
+                -webkit-transform:scale(1.3);
+                transform:scale(1.3);
+                -webkit-transition:1s ease-in-out;
+                transition:1s ease-in-out;
+            }
+        
+        }
+    }
+
+    
+     
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #1b1d1d;
+    color: white;
+
+    .footer-large-screen-nav {
+        width: 80%;
+        display: flex;
+        justify-content:center;
+        margin-top: 30px;
+        margin: auto;
+
+        ul {
+            text-decoration: none;
+            // font-weight: lighter;
+            // margin: auto;
+            font-size: 13px;
+            // width: 80px;
+            // text-align: right;
+        }
+        
+        
+        li {
+            display: flex;
+            align-items: flex-start;
+            list-style-type: none;
+            text-align: left;                
+            // margin-left: 17px;
+
+            a {
+                text-decoration: none;
+                color: rgb(168, 164, 164);
+                margin-left: -40px;
+
+            }
+            a:hover {
+                color: red;
+            }
+        }
+
+        .footer-contain{
+            width: 100%;
+            // text-decoration: none;
+            color:white;
+            // margin: auto;
+            // text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .footer-entete{
+            width: 100%;
+            // text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            
+        }
+            
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .ul-content {
+        display: flex;
+        align-items: flex-start;
+        margin-left: 40px;
+        margin-top: 30px;
+    }
+
+    .fa::before {
+        margin-left: -40px;
+    }
+    .fa {
+        width: 20px;
+    }
+
+    .last {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+        .copyright {
+            display: flex;
+            // align-items: flex-start;
+            margin-left: 12%;
+        }
+
+        .sociaux {
+           display: flex;
+           justify-content: center;
+           text-align: center;
+           margin-right: 400px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+    }
+    
+    .last-trait {
+        width: 80%;
+        margin: auto;
+
+        hr {
+            width: 100%; margin: auto; text-align: center;
+        }
+    }
+
+}
+
+}
