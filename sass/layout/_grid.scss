@@ -75,6 +75,11 @@
         width: 22%;
         height: 330px;
         background-color: rgb(243, 241, 237);
+
+       /* .arrival:hover {
+        
+            
+        }*/
     
 
         .price-reduction {
@@ -116,11 +121,62 @@
             }
 
         }
+
+        img {
+            height:100%;
+        }
+
+        .pass {
+            opacity:0;
+        }
+        .pass:hover{
+            opacity:1;
+        }
+
+        .pass:hover aside {
+            opacity:0;
+        }
+
+        .survol-search{
+          // display: none;
+            position: absolute;
+            bottom: 0;
+            
+            width: 19%;
+            height: 60px;
+            background: $colour-foot;
+            //border-right: white;
+        }
+
+        
+
+        .survol-add{
+            //visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 19.5%;
+            width: 59%;
+            height: 60px;
+            background: $colour-foot;
+        }
+
+        .survol-reload{
+            //visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 79%;
+            width: 19%;
+            height: 60px;
+            background: $colour-foot;
+           // border-right: white;
+        }
+        
     }
     .items {
         display: flex;
         justify-content: space-between;                
         font-size: $font-size;
+
     }
               
 }
@@ -176,10 +232,11 @@
     text-align: center;
 
     .arrival-top-products {
-    position: relative;
-    width: 22%;
-    height: 330px;
-    background-color: rgb(243, 241, 237);
+        position: relative;
+        width: 22%;
+        height: 330px;
+        background-color: rgb(243, 241, 237);
+    
         $colour:$colour-secondary;
         @mixin price-reduction($colour:$colour-secondary) {
             position: absolute;
@@ -201,6 +258,52 @@
        .form {
             @include price-reduction($colour:$colour-primary);
         }
+
+        .pass {
+            opacity:0;
+        }
+        .pass:hover{
+            opacity:1;
+        }
+
+        .survol-search{
+          // display: none;
+            position: absolute;
+            bottom: 0;
+            
+            width: 19%;
+            height: 60px;
+            background: $colour-foot;
+            //border-right: white;
+        }
+
+        
+
+        .survol-add{
+            //visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 19.5%;
+            width: 59%;
+            height: 60px;
+            background: $colour-foot;
+        }
+
+        .survol-reload{
+            //visibility: hidden;
+            position: absolute;
+            bottom: 0;
+            left: 79%;
+            width: 19%;
+            height: 60px;
+            background: $colour-foot;
+           // border-right: white;
+        }
+
+        img {
+            height: 100%;
+        }
+
     }
     
     .items-top-products {
